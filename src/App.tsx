@@ -1,3 +1,4 @@
+import React from 'react';
 import * as Cesium from 'cesium';
 import EarthViewer from './components/EarthViewer';
 import LocationShortcuts, { Location } from './components/Sidebar/LocationShortcuts';
@@ -8,11 +9,11 @@ import './index.css';
 Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJhNmRiOWQ2ZS1mMmNkLTQyMmMtYWYzNC0yODQ1MjU5ZmM5NTYiLCJpZCI6NDI2OTU4LCJpc3MiOiJodHRwczovL2lvbi5jZXNpdW0uY29tIiwiYXVkIjoidW5kZWZpbmVkX2RlZmF1bHQiLCJpYXQiOjE3Nzc4NzgxNzN9.dRsjW2aXGnEyhAUrcAz9imZ6BJGClTcdd0ESMrU1jiY";
 
 function App() {
-  const [terrainEnabled, setTerrainEnabled] = useState(true);
-  const [buildingsEnabled, setBuildingsEnabled] = useState(false);
-  const [atmosphereEnabled, setAtmosphereEnabled] = useState(true);
+  const [terrainEnabled, setTerrainEnabled] = React.useState(true);
+  const [buildingsEnabled, setBuildingsEnabled] = React.useState(false);
+  const [atmosphereEnabled, setAtmosphereEnabled] = React.useState(true);
   
-  const [targetLocation, setTargetLocation] = useState<Location | null>(null);
+  const [targetLocation, setTargetLocation] = React.useState<Location | null>(null);
 
   const handleSelectLocation = (loc: Location) => {
     setTargetLocation(loc);
@@ -74,3 +75,5 @@ function App() {
 }
 
 export default App;
+
+
