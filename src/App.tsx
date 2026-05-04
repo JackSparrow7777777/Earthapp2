@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import * as Cesium from 'cesium';
 import EarthViewer from './components/EarthViewer';
 import LocationShortcuts, { Location } from './components/Sidebar/LocationShortcuts';
